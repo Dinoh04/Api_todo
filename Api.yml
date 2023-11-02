@@ -1,0 +1,58 @@
+openapi: '3.0.2'
+info:
+  title: API Title
+  version: '1.0'
+servers:
+  - url: https://Swagger
+  - url: https://Swagger/v1
+paths:
+  /test:
+    get:
+      summary: Get all books
+      description: Returned all the book in my data
+      parameters:
+        - in : query
+          name: bookName
+          description: Filter return books by given name
+          required : false
+          schema : 
+              type: string
+
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type : object
+                properties:
+                  id:
+                    type: string
+                  bookName:
+                    type: string
+                
+    put:
+      summary: Create or update a list of books
+      description: Returned all the book in my data
+      parameters:
+        - in : query
+          name: bookName
+          description: Filter return books by given name
+          required : false
+          schema : 
+              type: string
+
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type : object
+                properties:
+                  id:
+                    type: string
+                  bookName:
+                    type: string
+                
+  
